@@ -27,10 +27,10 @@ public abstract class AbstractUploadStrategyImpl implements UploadStrategy {
             // 重新生成文件名
             String fileName = md5 + extName;
             // 判断文件是否已存在
-            if (!exists(path + fileName)) {
+//            if (!exists(path + fileName)) {
                 // 不存在则继续上传
                 upload(path, fileName, file.getInputStream());
-            }
+//            }
             // 返回文件访问路径
             return getFileAccessUrl(path + fileName);
         } catch (Exception e) {
